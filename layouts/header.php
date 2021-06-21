@@ -1,3 +1,10 @@
+<?php 
+$db = new mysqli('127.0.0.1', 'wyatt', '', 'keyBlank');
+if ($db->connect_errno) {
+    echo "Failed to connect to MySQL: " . $db->connect_error;
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>

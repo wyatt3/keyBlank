@@ -1,6 +1,8 @@
 <?php include('layouts/header.php');
-$checkingBalance = 2626.52;
-$savingsBalance = 1110.37;
+$checkingBalance = $db->query("SELECT * FROM accounts WHERE name = 'checking'")->fetch_array();
+$savingsBalance = $db->query("SELECT * FROM accounts WHERE name = 'savings'")->fetch_array();
+$checkingBalance = $checkingBalance['balance'];
+$savingsBalance = $savingsBalance['balance'];
 ?>
 
 <body class="bg-light">
@@ -18,24 +20,24 @@ $savingsBalance = 1110.37;
     <div class="hero text-light font-weight-bold">Welcome, Ed</div>
     <div class="container homepage-container mt-4">
         <div class="accounts">
-            <div class="account-card">
-                <a href="" class="account-title text-secondary font-weight-bold">Key Advantage MM Checking</a>
-                <div class="account-number">Checking - 9928</div>
-                <div class="account-balance text-dark">$<?php echo number_format($checkingBalance, 2); ?></div>
+            <div class="account-card" >
+                <a href="transfers.php?type=checking" class="account-title text-secondary font-weight-bold">Key Advantage MM Checking</a>
+                <div class="account-number" >Checking - 9928</div>
+                <div class="account-balance text-dark" onclick="window.location.href='transfers.php?type=checking'">$<?php echo number_format($checkingBalance, 2); ?></div>
                 <div class="account-balance-date">Available Balance as of <?php echo date("M j, Y"); ?></div>
                 <div class="account-buttons mt-2">
-                    <div class="btn btn-outline-secondary mr-1">Pay Bill</div>
-                    <div class="btn btn-outline-secondary mx-1">Transfer</div>
-                    <div class="btn btn-outline-secondary mx-1">Send Money</div>
+                    <div class="btn btn-outline-secondary mr-1" onclick="javascript:alert('This feature has been disabled on your account.')">Pay Bill</div>
+                    <div class="btn btn-outline-secondary mx-1" onclick="javascript:alert('This feature has been disabled on your account.')">Transfer</div>
+                    <div class="btn btn-outline-secondary mx-1" onclick="javascript:alert('This feature has been disabled on your account.')">Send Money</div>
                 </div>
             </div>
             <div class="account-card mt-4">
-                <a href="" class="account-title text-secondary font-weight-bold">Key Saver</a>
+                <a href="transfers.php?type=savings" class="account-title text-secondary font-weight-bold">Key Saver</a>
                 <div class="account-number">Savings - 2123</div>
-                <div class="account-balance text-dark">$<?php echo number_format($savingsBalance, 2); ?></div>
+                <div class="account-balance text-dark" onclick="window.location.href='transfers.php?type=savings'">$<?php echo number_format($savingsBalance, 2); ?></div>
                 <div class="account-balance-date">Available Balance as of <?php echo date("M j, Y"); ?></div>
                 <div class="account-buttons mt-2">
-                    <div class="btn btn-outline-secondary mx-1">Transfer</div>
+                    <div class="btn btn-outline-secondary mx-1" onclick="javascript:alert('This feature has been disabled on your account.')">Transfer</div>
                 </div>
             </div>
         </div>
