@@ -52,8 +52,9 @@ CREATE TABLE `transfers` (
   `bankType` varchar(45) NOT NULL,
   `title` varchar(45) NOT NULL,
   `amount` varchar(45) NOT NULL,
+  `date` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -62,6 +63,7 @@ CREATE TABLE `transfers` (
 
 LOCK TABLES `transfers` WRITE;
 /*!40000 ALTER TABLE `transfers` DISABLE KEYS */;
+INSERT INTO `transfers` VALUES (1,'checking','First Transfer','100.02','2021-06-20'),(2,'savings','funds transfer','100','2021-06-19');
 /*!40000 ALTER TABLE `transfers` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -74,4 +76,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-06-20 19:05:19
+-- Dump completed on 2021-06-21 11:41:54
