@@ -26,7 +26,7 @@ $savingsBalance = $savingsBalance['balance'];
                 <div class="account-balance text-dark" onclick="window.location.href='transfers.php?type=checking'">$<?php echo number_format($checkingBalance, 2); ?></div>
                 <div class="account-balance-date">Available Balance as of <?php echo date("M j, Y"); ?></div>
                 <div class="account-buttons mt-2">
-                    <div class="btn btn-outline-secondary mr-1" onclick="javascript:alert('This feature has been disabled on your account.')">Pay Bill</div>
+                    <div class="btn btn-outline-secondary mr-1" onclick="alert('This feature has been disabled on your account.')">Pay Bill</div>
                     <div class="btn btn-outline-secondary mx-1" onclick="javascript:alert('This feature has been disabled on your account.')">Transfer</div>
                     <div class="btn btn-outline-secondary mx-1" onclick="javascript:alert('This feature has been disabled on your account.')">Send Money</div>
                 </div>
@@ -41,5 +41,10 @@ $savingsBalance = $savingsBalance['balance'];
                 </div>
             </div>
         </div>
-        <div class="ads"></div>
+        <div class="ads">
+            <div class="ad-card">
+                <div class="ad-title text-secondary font-weight-bold">Invest in DogeCoin Today!</div>
+                <div class="ad-content">Halve your investment in as little as 8 hours with the much wow of this floofy doggo!</div>
+            </div>
+        </div>
     </div>

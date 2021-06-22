@@ -8,7 +8,7 @@
             <div class="card">
                 <div class="card-header">Password</div>
                 <div class="card-body">
-                    <div class="mt-3 font-weight-bold">Enter your user ID to get started</div>
+                    <div class="mt-3 font-weight-bold">Enter your password to continue</div>
                     <form action="" method="post" class="form-group mt-3">
                         <label for="pass">Password</label>
                         <input class="form-control" type="password" id="pass">
