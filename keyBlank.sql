@@ -41,6 +41,35 @@ INSERT INTO `accounts` VALUES (1,'checking','2626.52'),(2,'savings','1110.37');
 UNLOCK TABLES;
 
 --
+-- Table structure for table `ads`
+--
+
+DROP TABLE IF EXISTS `ads`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ads` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(45) DEFAULT NULL,
+  `p1` longtext,
+  `p2` longtext,
+  `img_path` varchar(45) DEFAULT NULL,
+  `small_text` varchar(45) DEFAULT NULL,
+  `btn_text` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ads`
+--
+
+LOCK TABLES `ads` WRITE;
+/*!40000 ALTER TABLE `ads` DISABLE KEYS */;
+INSERT INTO `ads` VALUES (1,'Invest in Dogecoin Today!','Halve your investment in as little as 8 hours with the much wow of this many trustful doggo!','Dogecoin uses much innovation combined with all new \"good boy\" technology to bork the value of your monies.','Dogecoin.png','Current Value: 1 Dogecoin = 1 Dogecoin','Buy the Dip!');
+/*!40000 ALTER TABLE `ads` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `transfers`
 --
 
@@ -54,7 +83,7 @@ CREATE TABLE `transfers` (
   `amount` varchar(45) NOT NULL,
   `date` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -63,7 +92,7 @@ CREATE TABLE `transfers` (
 
 LOCK TABLES `transfers` WRITE;
 /*!40000 ALTER TABLE `transfers` DISABLE KEYS */;
-INSERT INTO `transfers` VALUES (1,'checking','First Transfer','100.02','2021-06-20'),(2,'savings','funds transfer','100','2021-06-19');
+INSERT INTO `transfers` VALUES (1,'checking','First Transfer','100.02','2021-06-20'),(2,'savings','funds transfer','100','2021-06-19'),(3,'checking','test','200.04','2021-06-23');
 /*!40000 ALTER TABLE `transfers` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -76,4 +105,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-06-21 11:41:54
+-- Dump completed on 2021-06-23 14:29:53

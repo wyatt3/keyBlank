@@ -3,6 +3,8 @@ $checkingBalance = $db->query("SELECT * FROM accounts WHERE name = 'checking'")-
 $savingsBalance = $db->query("SELECT * FROM accounts WHERE name = 'savings'")->fetch_array();
 $checkingBalance = $checkingBalance['balance'];
 $savingsBalance = $savingsBalance['balance'];
+
+$ad = $db->query("SELECT * FROM ads WHERE id = ". rand(1, 5))->fetch_array();
 ?>
 
 <body class="bg-light">
@@ -42,14 +44,14 @@ $savingsBalance = $savingsBalance['balance'];
             </div>
         </div>
         <div class="ads">
-            <div class="ad-card">
-                <div class="ad-title text-secondary font-weight-bold mb-2">Invest in Dogecoin Today!</div>
-                <div class="ad-content text-center">
-                    <p>Halve your investment in as little as 8 hours with the much wow of this many trustful doggo!</p>
-                    <img width="45%" src="img/dogecoin.png">
-                    <p class="mt-3">Dogecoin uses much innovation combined with all new "good boy" technology to bork the value of your monies.</p>
-                    <p class="font-italic font-weight-light small">Current Value: 1 Dogecoin = 1 Dogecoin</p>
-                    <div class="btn btn-outline-secondary" onclick="disabled()">Buy the Dip!</div>
+            <div class="ad-card text-center">
+                <div class="ad-title text-secondary font-weight-bold mb-2"><?php echo $ad['title']; ?></div>
+                <div class="ad-content">
+                    <p><?php echo $ad['p1']; ?></p>
+                    <img width="45%" src="img/<?php echo $ad['img_path']; ?>">
+                    <p class="mt-3"><?php echo $ad['p2']; ?></p>
+                    <p class="font-italic font-weight-light small"><?php echo $ad['small_text']; ?></p>
+                    <div class="btn btn-outline-secondary" onclick="disabled()"><?php echo $ad['btn_text']; ?></div>
                 </div>
             </div>
         </div>

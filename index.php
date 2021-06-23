@@ -10,7 +10,7 @@
                     <div class="header text-center mt-4"><h4>Secure Sign On</h4></div>
                     <div class="mt-3 font-weight-bold">Enter your user ID to get started</div>
                     <div class="text-secondary my-3">Problem signing on?</div>
-                    <form action="" method="post" class="form-group">
+                    <form action="" method="post" class="form-group" onsubmit="return redirectWithoutForm(event, 'password.php');">
                         <label for="user">User ID</label>
                         <input class="form-control" type="text" id="user" value="grandpa's login">
                         <input type="checkbox" class="form-check d-inline mt-3" checked>

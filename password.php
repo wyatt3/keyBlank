@@ -9,7 +9,7 @@
                 <div class="card-header">Password</div>
                 <div class="card-body">
                     <div class="mt-3 font-weight-bold">Enter your password to continue</div>
-                    <form action="" method="post" class="form-group mt-3">
+                    <form action="" method="post" class="form-group mt-3" onsubmit="return redirectWithoutForm(event, 'homepage.php')">
                         <label for="pass">Password</label>
                         <input class="form-control" type="password" id="pass">
                         <a class="btn btn-block btn-lg btn-primary disabled mt-3 text-light" href="homepage.php">Continue</a>

@@ -12,4 +12,11 @@
     function disabled() {
         alert('This feature has been disabled on your account.');
     }
+    function redirectWithoutForm(e, url) {
+        e.preventDefault();
+        if ($(".form-control").val().length > 0) {
+            window.location.href = url;
+        }
+        return false;
+    }
 </script>
