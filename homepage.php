@@ -12,7 +12,7 @@ $savingsBalance = $savingsBalance['balance'];
                 <a href="#" class="navbar-brand"><img src="img/dark_logo.png" height="32px" alt=""></a>
             </div>
             <div class="navbar-right">
-                <a class="text-dark" href="login.php">Sign Off</a>
+                <a class="text-dark" href="index.php">Sign Off</a>
             </div>
         </div>
         <div class="red-bar bg-primary"></div>
@@ -26,9 +26,9 @@ $savingsBalance = $savingsBalance['balance'];
                 <div class="account-balance text-dark" onclick="window.location.href='transfers.php?type=checking'">$<?php echo number_format($checkingBalance, 2); ?></div>
                 <div class="account-balance-date">Available Balance as of <?php echo date("M j, Y"); ?></div>
                 <div class="account-buttons mt-2">
-                    <div class="btn btn-outline-secondary mr-1" onclick="alert('This feature has been disabled on your account.')">Pay Bill</div>
-                    <div class="btn btn-outline-secondary mx-1" onclick="javascript:alert('This feature has been disabled on your account.')">Transfer</div>
-                    <div class="btn btn-outline-secondary mx-1" onclick="javascript:alert('This feature has been disabled on your account.')">Send Money</div>
+                    <div class="btn btn-outline-secondary mr-1" onclick="disabled()">Pay Bill</div>
+                    <div class="btn btn-outline-secondary mx-1" onclick="disabled()">Transfer</div>
+                    <div class="btn btn-outline-secondary mx-1" onclick="disabled()">Send Money</div>
                 </div>
             </div>
             <div class="account-card mt-4">
@@ -37,14 +37,21 @@ $savingsBalance = $savingsBalance['balance'];
                 <div class="account-balance text-dark" onclick="window.location.href='transfers.php?type=savings'">$<?php echo number_format($savingsBalance, 2); ?></div>
                 <div class="account-balance-date">Available Balance as of <?php echo date("M j, Y"); ?></div>
                 <div class="account-buttons mt-2">
-                    <div class="btn btn-outline-secondary mx-1" onclick="javascript:alert('This feature has been disabled on your account.')">Transfer</div>
+                    <div class="btn btn-outline-secondary mx-1" onclick="disabled()">Transfer</div>
                 </div>
             </div>
         </div>
         <div class="ads">
             <div class="ad-card">
-                <div class="ad-title text-secondary font-weight-bold">Invest in DogeCoin Today!</div>
-                <div class="ad-content">Halve your investment in as little as 8 hours with the much wow of this floofy doggo!</div>
+                <div class="ad-title text-secondary font-weight-bold mb-2">Invest in Dogecoin Today!</div>
+                <div class="ad-content text-center">
+                    <p>Halve your investment in as little as 8 hours with the much wow of this many trustful doggo!</p>
+                    <img width="45%" src="img/dogecoin.png">
+                    <p class="mt-3">Dogecoin uses much innovation combined with all new "good boy" technology to bork the value of your monies.</p>
+                    <p class="font-italic font-weight-light small">Current Value: 1 Dogecoin = 1 Dogecoin</p>
+                    <div class="btn btn-outline-secondary" onclick="disabled()">Buy the Dip!</div>
+                </div>
             </div>
         </div>
     </div>
+<?php include('layouts/footer.php'); ?>
