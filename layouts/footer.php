@@ -1,3 +1,8 @@
+<div class="footer fixed-bottom">
+    <span>This website is purely satirical and does not intentionally collect, transmit, or store any banking information related to its users. Please don't sue me.</span>
+    <span>&copy; Wyatt Johnson <?php echo date('Y'); ?></span>
+</div>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     setInterval(function() {
@@ -20,3 +25,4 @@
         return false;
     }
 </script>
+<body>

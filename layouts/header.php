@@ -15,4 +15,5 @@ if ($db->connect_errno) {
         <link rel="apple-touch-icon" href="img/app_icon.png">
         <title>KeyBlank</title>
     </head>
+<body>
     
