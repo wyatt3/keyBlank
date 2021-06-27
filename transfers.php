@@ -17,7 +17,7 @@ $transfers = $stmt->get_result();
 $stmt->close();
 
 foreach ($transfers as $transfer) {
-  echo $transfer['title'];
+  echo $transfer['date'] . "<br>";
 }
 ?>
 
