@@ -20,16 +20,17 @@ foreach ($transfers as $transfer) {
   echo $transfer['title'];
 }
 ?>
-  <body class="bg-light">
-    <div class="fixed-top">
-      <div class="navbar navbar-light bg-white">
-        <div class="navbar-left">
-          <a href="#" class="navbar-brand"><img src="img/dark_logo.png" height="32px" alt=""></a>
-        </div>
-        <div class="navbar-right">
-          <a class="text-dark" href="index.php">Sign Off</a>
-        </div>
-      </div>
-      <div class="red-bar bg-primary"></div>
+
+<div class="fixed-top">
+  <div class="navbar navbar-light bg-white">
+    <div class="navbar-left">
+      <a href="homepage.php" class="navbar-brand"><img src="img/dark_logo.png" height="32px" alt=""></a>
     </div>
-  </body>
+    <div class="navbar-right">
+      <a class="text-dark" href="index.php">Sign Off</a>
+    </div>
+  </div>
+  <div class="red-bar bg-primary"></div>
+</div>
+
+<?php include('layouts/footer.php'); ?>

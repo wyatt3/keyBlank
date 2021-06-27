@@ -56,7 +56,7 @@ CREATE TABLE `ads` (
   `small_text` varchar(255) DEFAULT NULL,
   `btn_text` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -65,7 +65,7 @@ CREATE TABLE `ads` (
 
 LOCK TABLES `ads` WRITE;
 /*!40000 ALTER TABLE `ads` DISABLE KEYS */;
-INSERT INTO `ads` VALUES (1,'Invest in Dogecoin Today!','Halve your investment in as little as 8 hours with the much wow of this many trustful doggo!','Dogecoin uses much innovation combined with all new \"good boy\" technology to bork the value of your monies.','Dogecoin.png','Current Value: 1 Dogecoin = 1 Dogecoin','Buy the Dip!'),(2, 'Need to secure your savings?', "Protect your life\'s earnings by storing it in our patented \"vouchers\" designed specifically for extracting the liquid assets of elderly citizens.", "We\'ve paired with Google to provide \"vouchers\"  through which we can retrieve your savings. Simply purchase as many Google Play Gift Cards as you can from any local store, and enter the provided codes using the link below to lock in your !", 'play.png', 'Exchanged \"vouchers\" are non-refundable and exchanging said \"voucher\" does not entitle you to any monetary compensation.', 'Redeem \"Vouchers\" Now!');
+INSERT INTO `ads` VALUES (1,'Invest in Dogecoin Today!','Halve your investment in as little as 8 hours with the much wow of this many trustful doggo!','Dogecoin uses much innovation combined with all new \"good boy\" technology to bork the value of your monies.','Dogecoin.png','Current Value: 1 Dogecoin = 1 Dogecoin','Buy the Dip!'),(2, 'Need to secure your savings?', "Protect your life\'s earnings by storing it in our patented \"vouchers\" designed specifically for extracting the liquid assets of elderly citizens.", "We\'ve paired with Google to provide \"vouchers\"  through which we can retrieve your savings. Simply purchase as many Google Play Gift Cards as you can from any local store, and enter the provided codes using the link below to lock in your savings!", 'play.png', 'Exchanged \"vouchers\" are non-refundable and exchanging said \"voucher\" does not entitle you to any monetary compensation.', 'Redeem \"Vouchers\" Now!'), (3, 'Checking your bank too often?', 'Try setting a login cooldown on your bank account! This new subscription-based feature from KeyBlank allows you to control how often you can log in to your online bank account.', "This feature was developed to help combat our users\' compulsion to check their account far more often than necessary. For a small fee every month we can fight the urge for you! Why do something yourself when you can pay somebody else to do it for you?", 'clock.png', 'Login cooldown subscriptions start at $99.95/month', 'Subscribe Now!'), (4, 'Feeling Drained?', '', 'p2', 'carrot.png', 'small_text', 'btn_text');
 /*!40000 ALTER TABLE `ads` ENABLE KEYS */;
 UNLOCK TABLES;
 

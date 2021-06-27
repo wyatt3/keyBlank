@@ -5,13 +5,13 @@ $savingsBalance = $db->query("SELECT * FROM accounts WHERE name = 'savings'")->f
 $checkingBalance = $checkingBalance['balance'];
 $savingsBalance = $savingsBalance['balance'];
 
-$ad = $db->query("SELECT * FROM ads WHERE id = ". rand(1, 2))->fetch_array();
+$ad = $db->query("SELECT * FROM ads WHERE id = ". rand(1, 4))->fetch_array();
 ?>
 
 <div class="fixed-top">
     <div class="navbar navbar-light bg-white">
         <div class="navbar-left">
-            <a href="#" class="navbar-brand"><img src="img/dark_logo.png" height="32px" alt=""></a>
+            <a href="homepage.php" class="navbar-brand"><img src="img/dark_logo.png" height="32px" alt=""></a>
         </div>
         <div class="navbar-right">
             <a class="text-dark" href="index.php">Sign Off</a>
