@@ -56,5 +56,11 @@ $ad = $db->query("SELECT * FROM ads WHERE id = ". rand(1, 5))->fetch_array();
         </div>
     </div>
 </div>
-
+<!--
+ //! REMOVE 
+-->
+<a href="reset.php" class="btn btn-danger">Reset Database</a>
+<!-- 
+ //! END REMOVE
+ -->
 <?php include('layouts/footer.php'); ?>

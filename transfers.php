@@ -9,10 +9,11 @@ $stmt->execute();
 $account = $stmt->get_result()->fetch_assoc();
 $stmt->close();
 
-$threeMonths = date('Y-m-d', strtotime('-365 days', strtotime(date('Y-m-d'))));
+$today =  date('Y-m-d');
+$threeMonths = date('Y-m-d', strtotime('-365 days', strtotime($today)));
 // Pulling in transfers for that account
 $stmt = $db->prepare("SELECT * FROM transfers WHERE bankType = ? AND (`date` BETWEEN ? AND ?) ORDER BY `date` DESC");
-$stmt->bind_param('sss', $account['name'], $threeMonths, date('Y-m-d'));
+$stmt->bind_param('sss', $account['name'], $threeMonths, $today);
 $stmt->execute();
 $transfers = $stmt->get_result();
 $stmt->close();
@@ -38,16 +39,24 @@ $stmt->close();
     <tr>
       <th>Date</th>
       <th>Description</th>
-      <th>Amount</th>
+      <th>Type</th>
+      <th class="text-right">Amount</th>
+      <th class="text-right">Transaction Balance</th>
     </tr>
-  <?php foreach ($transfers as $transfer) {
+  <?php $accountBalance = $account['balance'];
+  foreach ($transfers as $transfer) {
     $date = date_create($transfer['date']); ?>
     <tr>
       <td><?php echo date_format($date, 'M j'); ?></td>
       <td><?php echo $transfer['title']; ?></td>
-      <td>$<?php echo number_format($transfer['amount'], 2); ?></td>
+      <td><?php echo $transfer['type']; ?></td>
+      <td class="text-right <?php echo $transfer['amount'] < 0 ? '">-$': 'text-success">$'; echo number_format(abs($transfer['amount']), 2); ?></td>
+      <td class="text-right">$<?php echo number_format($accountBalance, 2); ?></td>
     </tr>
-<?php } ?>
+<?php 
+    $accountBalance -= $transfer['amount'];
+  }
+ ?>
   </table>
 </div>
 

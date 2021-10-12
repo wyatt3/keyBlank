@@ -80,6 +80,7 @@ CREATE TABLE `transfers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `bankType` varchar(45) NOT NULL,
   `title` varchar(45) NOT NULL,
+  `type` varchar(45) NOT NULL,
   `amount` varchar(45) NOT NULL,
   `date` date NOT NULL,
   PRIMARY KEY (`id`)
