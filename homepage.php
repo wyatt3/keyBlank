@@ -5,7 +5,7 @@ $savingsBalance = $db->query("SELECT * FROM accounts WHERE name = 'savings'")->f
 $checkingBalance = $checkingBalance['balance'];
 $savingsBalance = $savingsBalance['balance'];
 
-$ad = $db->query("SELECT * FROM ads WHERE id = ". rand(1, 4))->fetch_array();
+$ad = $db->query("SELECT * FROM ads WHERE id = ". rand(1, 5))->fetch_array();
 ?>
 
 <div class="fixed-top">

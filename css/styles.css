@@ -13,4 +13,11 @@ body {color: #666;}
 .ad-title {font-size: 25px;}
 .ad-content {width: 95%;margin: auto;}
 
+
+.bank-name {font-size: 22px;margin-top: 15px;}
+.bank-name span {font-weight: 100;}
+.balance {font-size: 40px;font-weight: 200;margin-bottom: -7px;}
+.available-balance-text {font-weight: 200;}
+.transfers-table {border-radius: 5px;margin-top: 25px;}
+
 .footer {padding: 15px;font-size: 10px;display: flex;justify-content: space-between;background-color: #fff;}
