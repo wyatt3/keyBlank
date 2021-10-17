@@ -49,7 +49,7 @@ $stmt->close();
     <tr>
       <td><?php echo date_format($date, 'M j'); ?></td>
       <td><?php echo $transfer['title']; ?></td>
-      <td><?php echo $transfer['type']; ?></td>
+      <td class="type type-<?php echo str_replace(' ', '-', strtolower($transfer['type'])) ?>"><div class="type-block"></div><?php echo $transfer['type']; ?></td>
       <td class="text-right <?php echo $transfer['amount'] < 0 ? '">-$': 'text-success">$'; echo number_format(abs($transfer['amount']), 2); ?></td>
       <td class="text-right">$<?php echo number_format($accountBalance, 2); ?></td>
     </tr>

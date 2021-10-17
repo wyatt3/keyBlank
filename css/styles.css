@@ -20,4 +20,10 @@ body {color: #666;}
 .available-balance-text {font-weight: 200;}
 .transfers-table {border-radius: 5px;margin-top: 25px;}
 
+.type-block {width: 11px;height: 11px;border-radius: 3px;display: inline-block;margin-right: 7px;}
+.type-deposit .type-block {background-color: #496800;}
+.type-debit-card .type-block {background-color: #5832b1;}
+.type-deposit {color: #496800;}
+.type-debit-card {color: #5832b1;}
+
 .footer {padding: 15px;font-size: 10px;display: flex;justify-content: space-between;background-color: #fff;}
